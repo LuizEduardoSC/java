@@ -28,10 +28,6 @@ public class Exe04 {
 
 
         System.out.println("Diferença: " + diferenca);
-		
-		
-
-		
 
 	}
 
