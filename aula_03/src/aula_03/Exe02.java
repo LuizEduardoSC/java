@@ -7,31 +7,30 @@ public class Exe02 {
 	static Scanner leia = new Scanner(System.in);
 
 	public static void main(String[] args) {
+		// Escreva um algoritmo em Java, que leia um número inteiro via
+		// teclado e mostre na tela uma mensagem indicando se este número é par 
+		// ou ímpar e se o número é positivo ou negativo. Veja os exemplos abaixo:
 		
-		int idade;
-		String nomeDoador, permitido;
-		boolean primeiraDoacao;
+		int numero;
+		String paridade, tipo;
 		
-		System.out.println("Digite o nome do doador: ");
-		nomeDoador = leia.nextLine();
-		
-		System.out.println("Digite a Idade do doador: ");
-		idade = leia.nextInt();
-		
-		System.out.println("Primeira doação de sangue? ");
-		primeiraDoacao = leia.nextBoolean();
+		System.out.println("Digite o valor: ");
+		numero = leia.nextInt();
 
-		permitido = "está apto";
-		
-		if(idade < 18 || idade > 69) {
-			permitido = "não está apto";
+		if (numero % 2 == 0) {
+			paridade = "Par";
 		} 
-		else if((idade >= 60 && idade <= 69) && (primeiraDoacao == true)) {
-			permitido = "não está apto";
+		else {
+			paridade = "Ímpar";
+		}
+		if (numero >= 0) {
+			tipo = "Positivo";
+		} 
+		else {
+			tipo = "Negativo";
 		}
 		
-		System.out.printf("%s %s para doar sangue!", nomeDoador, permitido);
-
+		System.out.printf("O Número é %s e %s!", paridade, tipo);
 	}
 
 }

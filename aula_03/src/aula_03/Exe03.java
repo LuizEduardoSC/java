@@ -8,51 +8,29 @@ public class Exe03 {
 
 	public static void main(String[] args) {
 		
-		int cod, quant;
-		double valor_total, valor;
-		String prod;
+		int idade;
+		String nomeDoador, permitido;
+		boolean primeiraDoacao;
 		
-		System.out.println("Código do Produto: ");
-		cod = leia.nextInt();
-		System.out.println("Quantidade: ");
-		quant = leia.nextInt();
+		System.out.println("Digite o nome do doador: ");
+		nomeDoador = leia.nextLine();
+		
+		System.out.println("Digite a Idade do doador: ");
+		idade = leia.nextInt();
+		
+		System.out.println("Primeira doação de sangue? ");
+		primeiraDoacao = leia.nextBoolean();
 
-		switch(cod) {
-			case 1:
-				valor = 10.00;
-				prod = "Cachorro Quente";
-				break;
-			case 2:
-				valor = 15.00;
-				prod = "X-Salada";
-				break;
-			case 3:
-				valor = 18.00;
-				prod = "X-Bacon";
-				break;
-			case 4:
-				valor = 12.00;
-				prod = "Bauru";
-				break;
-			case 5:
-				valor = 8.00;
-				prod = "Refrigerante";
-				break;
-			case 6:
-				valor = 13.00;
-				prod = "Suco de laranja";
-				break;
-			default:
-				valor = 0;
-				prod = "Produto inválido";
+		permitido = "está apto";
+		
+		if(idade < 18 || idade > 69) {
+			permitido = "não está apto";
+		} 
+		else if((idade >= 60 && idade <= 69) && (primeiraDoacao == true)) {
+			permitido = "não está apto";
 		}
 		
-		valor_total = (quant*valor);
-		
-		System.out.printf("Produto: %s\nValor total: R$ %.2f\n", prod,  valor_total);
-		
-		
-	
+		System.out.printf("%s %s para doar sangue!", nomeDoador, permitido);
 
 	}
 
