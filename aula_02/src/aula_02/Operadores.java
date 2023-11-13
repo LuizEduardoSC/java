@@ -29,7 +29,7 @@ public class Operadores {
 		System.out.println("Digite o tamanho: ");
 		tamanho = Leia.nextInt();
 		
-		System.out.println("O valor digitado foi : " + tamanho);
+		System.out.println("O valor digitado foi: " + tamanho);
 		
 		
 		

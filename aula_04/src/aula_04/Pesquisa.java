@@ -43,7 +43,7 @@ public class Pesquisa {
 				futebol ++;
 			
 			System.out.println("Deseja continuar (S/N)? ");
-			leia.skip("\\R");
+			leia.skip("\\R"); /*Pergunta se a pessoa quer continuar ou não*/
 			continua = leia.nextLine().toUpperCase();
 		}
 		
