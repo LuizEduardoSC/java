@@ -19,5 +19,4 @@ public class TestaFuncionario {
 		f2.visualizar();
 		
 	}
-
 }
